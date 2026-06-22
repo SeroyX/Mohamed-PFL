@@ -3,6 +3,15 @@ import { FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-ic
 //import { SiKaggle } from 'react-icons/si'
 
 const Hero = () => {
+  const handleDownloadCV = () => {
+    const link = document.createElement('a')
+    link.href = `${import.meta.env.BASE_URL}CV.pdf`
+    link.download = 'CV.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-20 pb-12 relative overflow-hidden">
       {/* Animated background elements */}
@@ -82,7 +91,7 @@ const Hero = () => {
               <a href="#contact" className="btn-secondary">
                 Get In Touch
               </a>
-              <button className="btn-secondary inline-flex items-center gap-2">
+              <button onClick={handleDownloadCV} className="btn-secondary inline-flex items-center gap-2">
                 <FiDownload size={18} />
                 Resume
               </button>
