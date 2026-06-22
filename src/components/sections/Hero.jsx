@@ -5,7 +5,7 @@ import { FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-ic
 const Hero = () => {
   const handleDownloadCV = () => {
     const link = document.createElement('a')
-    link.href = `${import.meta.env.BASE_URL}CV.pdf`
+    link.href = '/CV.pdf'
     link.download = 'CV.pdf'
     document.body.appendChild(link)
     link.click()
