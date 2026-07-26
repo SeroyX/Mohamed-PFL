@@ -10,6 +10,7 @@ const About = () => {
     "Languages" : ["Python", "Java", "JavaScript", "Dart", "SQL"],
     "Web & Mobile Development": ["React.js", "Flutter", "HTML5", "CSS"],
     "Database & Tools": ["MySQL", "Git", "GitHub", "VS Code", "Android Studio"],
+    "Networks & Systems": ["Cisco Packet Tracer", "TCP/IP architecture", "OSI model", "IPv4/IPv6", "Subnetting", "VLSM", "Switching", "Routing", "VLAN", "ACL", "NAT", "DHCP", "DNS", "Linux."]
   }
 
   const containerVariants = {
@@ -129,8 +130,9 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { flag: 'AR', name: 'Arabic', level: 'Native', proficiency: 100 },
-                { flag: 'EN', name: 'English', level: 'Fluent', proficiency: 90 },
-                { flag: 'FR', name: 'French', level: 'Intermediate', proficiency: 75 }
+                { flag: 'FR', name: 'French', level: 'Fluent', proficiency: 85 },
+                { flag: 'EN', name: 'English', level: 'Intermediate', proficiency: 75 },
+                
               ].map((lang, idx) => (
                 <motion.div
                   key={lang.name}
